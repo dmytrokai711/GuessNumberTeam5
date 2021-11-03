@@ -10,12 +10,22 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <input type="number" class='userNum'>
-        <button class="button">go</button>
-        <p class="condition">Введите число от 1 до 100!</p>
-        <p class="par" id="str"></p>
+    <div class="form">
+        <div class="rules">
+            <h1>Правила</h1>
+            <p> Привет, я загадал число от 1 до 100. Попробуй угадать его за 5 попыток! Хмм, кажется я слегка переборщил с диапазон чисел. Ладно, так и быть, я буду тебе подсказывать, начиная со второй попытки и только со второй.
+                Если ты будешь ближе к загаданому числу, то я буду говорить “Не угадал, но теплее!!! Осталось n попыток”, а если дальше, то “Не угадал, холоднее… Осталось n попыток”. Ну что, попробуешь угадать?
+            </p>
+            <button id="start"><p>Сыграеееееем</p></button>
+        </div>
+        <div class="wrapper">
+            <input type="number" class='userNum'>
+            <button class="button">go</button>
+            <p class="condition">Введите число от 1 до 100!</p>
+            <p class="par" id="str"></p>
+        </div>
     </div>
+   
     <script src="src/js/GenNumJS.js"></script>
 </body>
 
