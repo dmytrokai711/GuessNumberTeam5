@@ -1,5 +1,6 @@
 const numInput = document.querySelector('.userNum');
 const numButton = document.querySelector('.button');
+const resetButton = document.querySelector('.resetButton');
 const condition = document.querySelector('.condition');
 const result = document.querySelector('.par');
 
@@ -19,3 +20,9 @@ numButton.addEventListener("click", function () {
         //вызов функции
     }
 });
+
+resetButton.addEventListener("click", function () {
+    result.classList.add('active');
+    result.innerHTML = '';
+    //функция рандом и обнуление попыток
+})

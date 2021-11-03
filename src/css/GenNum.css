@@ -74,7 +74,8 @@ input[type='number'] {
 	display: flex;
 	position: relative;
 }
-.button{
+
+.allButtons button{
 	width: 100px;
 	height: 35px;
 	background-color: #d0f3e9;
