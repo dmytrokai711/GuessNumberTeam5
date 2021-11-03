@@ -1,8 +1,13 @@
 const numInput = document.querySelector('.userNum');
+const rulesBlock = document.querySelector('.rules');
 const numButton = document.querySelector('.button');
 const condition = document.querySelector('.condition');
 const result = document.querySelector('.par');
+const startButton = document.querySelector('#start');
 
+startButton.addEventListener("click", function () {
+    rulesBlock.classList.add('hidden');
+});
 numInput.addEventListener("click", function () {
     condition.classList.add('active');
 });

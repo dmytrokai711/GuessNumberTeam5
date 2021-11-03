@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic|Playfair+Display+SC:400,700&subset=latin,cyrillic);
 *{
 	padding: 0;
 	margin: 0;
 	border: 0;
+	font-family: 'Arimo', sans-serif;
 }
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
@@ -23,6 +25,39 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+.hidden {
+	display: none;
+}
+.form { 
+	width: 650px;
+    margin : 50px auto;
+	color: #69ebf5;
+}
+.rules h1 {
+	text-align: center;
+	font-size: 40px;
+	margin: 10px 0 10px 0;
+}
+
+.rules { 
+	text-align: left;
+	font-size: 24px;
+	border: 3px solid #ff2a6d;
+	padding: 10px;
+	line-height: 1.5;
+	text-indent: 50px;
+	
+}
+#start { 
+	width: 200px;
+	margin : 20px auto;
+	display: flex;	
+	justify-content: center;
+}
+#start p { 
+	margin-top: 7px;
+}
+
 input,button,textarea{font-family:inherit;}
 
 input::-ms-clear{display: none;}
@@ -37,9 +72,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body{
     background-color: #01012b;
-}
-.wrapper{
-    color: #69ebf5;
 }
 .userNum {
     border: 3px solid #ff2a6d; 
@@ -74,7 +106,7 @@ input[type='number'] {
 	display: flex;
 	position: relative;
 }
-.button{
+button{
 	width: 100px;
 	height: 35px;
 	background-color: #d0f3e9;
@@ -115,3 +147,4 @@ input[type='number'] {
 	opacity: 1;
 	bottom: -30px;
 }
+
