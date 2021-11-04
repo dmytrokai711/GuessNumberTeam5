@@ -1,9 +1,12 @@
 const numInput = document.querySelector('.userNum');
 const rulesBlock = document.querySelector('.rules');
 const numButton = document.querySelector('.button');
+const resetButton = document.querySelector('.resetButton');
 const condition = document.querySelector('.condition');
 const result = document.querySelector('.par');
 const startButton = document.querySelector('#start');
+let numberTries = 5;
+function random(max) { return Math.floor(Math.random() * (max + 1)); }
 
 startButton.addEventListener("click", function () {
     rulesBlock.classList.add('hidden');
@@ -24,3 +27,10 @@ numButton.addEventListener("click", function () {
         //вызов функции
     }
 });
+
+
+resetButton.addEventListener("click", function () {
+    result.innerHTML = '';
+    numberTries = 5;
+    secretNumber = random(100);
+})
