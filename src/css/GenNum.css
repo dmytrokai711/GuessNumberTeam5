@@ -16,8 +16,6 @@ a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 
 html,body{
-	height: 100%;
-	width: 100%;
 	font-size: 100%;
 	line-height: 1;
 	font-size: 14px;
@@ -33,6 +31,7 @@ html,body{
     margin : 50px auto;
 	color: #69ebf5;
 }
+
 .rules h1 {
 	text-align: center;
 	font-size: 40px;
@@ -40,12 +39,16 @@ html,body{
 }
 
 .rules { 
+	width: 650px;
 	text-align: left;
 	font-size: 24px;
 	border: 3px solid #ff2a6d;
 	padding: 10px;
 	line-height: 1.5;
 	text-indent: 50px;
+	position: absolute;
+	left: 50% - 650px;
+	top : 20%;
 	
 }
 #start { 
