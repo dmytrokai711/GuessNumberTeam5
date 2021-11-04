@@ -4,12 +4,15 @@ const numButton = document.querySelector('.button');
 const resetButton = document.querySelector('.resetButton');
 const condition = document.querySelector('.condition');
 const result = document.querySelector('.par');
+const game = document.querySelector('.game');
 const startButton = document.querySelector('#start');
-let numberTries = 5;
+
+//const numberTries = 5;
 function random(max) { return Math.floor(Math.random() * (max + 1)); }
 
 startButton.addEventListener("click", function () {
     rulesBlock.classList.add('hidden');
+    game.classList.remove('hidden')
 });
 numInput.addEventListener("click", function () {
     condition.classList.add('active');
@@ -30,7 +33,9 @@ numButton.addEventListener("click", function () {
 
 
 resetButton.addEventListener("click", function () {
-    result.innerHTML = '';
+    game.classList.add('hidden');
+    rulesBlock.classList.remove('hidden')
+    /*result.innerHTML = '';
     numberTries = 5;
-    secretNumber = random(100);
+    secretNumber = random(100);*/
 })
