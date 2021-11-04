@@ -3,7 +3,7 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
-	font-family: 'Arimo', sans-serif;
+	font-family: Tahoma;
 }
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
@@ -18,7 +18,7 @@ nav,footer,header,aside{display: block;}
 html,body{
 	font-size: 100%;
 	line-height: 1;
-	font-size: 14px;
+	font-size: 24px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -85,9 +85,9 @@ body{
     -khtml-border-radius: 10px; 
     background: #0a0a66; 
     outline: none; 
-    height: 35px; 
-    width: 250px; 
-    font-size: 20px; 
+    height: 60px; 
+    width: 400px; 
+    font-size: 40px; 
     font-family: Tahoma; 
     text-align: center; 
  }
@@ -105,12 +105,13 @@ input[type='number'] {
 }
 
 .wrapper{
-	margin: 200px 0 0 200px;
+	margin: 200px 0 0 125px;
 	display: flex;
+	flex-direction: column;
 	position: relative;
 }
 button{
-	width: 100px;
+	width: 185px;
 	height: 35px;
 	background-color: #d0f3e9;
 	border: 2px solid #ff2a6d;
@@ -118,14 +119,11 @@ button{
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
     -khtml-border-radius: 10px; 
-    margin-left: 10px;
+	margin-right: 20px;
+	margin-top: 20px;
     text-transform: uppercase;
     font-family: "Tahoma";
     font-weight: 700;
-}
-
-.button{
-	display: inline-block;
 }
 
 .condition{
@@ -139,7 +137,7 @@ button{
 }
 .condition.active{
 	opacity: 1;
-	top: -30px;
+	top: -40px;
 }
 .par{
 	position: absolute;
@@ -153,6 +151,46 @@ button{
 }
 .par.active{
 	opacity: 1;
-	bottom: -30px;
+	bottom: -40px;
 }
-
+/* my code*/
+.progress{
+    height: 20px;
+    width: 100%;
+    border: 10px solid #ff2a6d;
+    border-radius: 15px;
+}
+.progress .color{
+    background-color: #05d9e8;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 10s infinite linear;    
+}
+.color{
+	margin: -5px 0 10px 0;
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
+.imgrandom{
+	display: flex;
+	justify-content: center;
+}
+.cyber{
+	width: 650px;
+}

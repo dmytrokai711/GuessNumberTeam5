@@ -11,6 +11,9 @@
 
 <body>
     <div class="form">
+        <div class = "imgrandom">
+            <img src="../GuessNumberTeam5/img/randomizer (2).png" alt="Ничего не загрузилось!" class="cyber">
+        </div>
         <div class="rules">
             <h1>Правила</h1>
             <p> Привет, я загадал число от 1 до 100. Попробуй угадать его за 5 попыток! Хмм, кажется я слегка переборщил с диапазон чисел. Ладно, так и быть, я буду тебе подсказывать, начиная со второй попытки и только со второй.
@@ -18,18 +21,21 @@
             </p>
             <button id="start"><p>Сыграеееееем</p></button>
         </div>
+        <div class="progress">
+            <div class="color"></div>
+        </div>
         <form name="thGame" class="game hidden">
             <div class="wrapper">
-                <input type="number" class='userNum'>
+                    <input type="number" class='userNum'>
+                        <p class="condition active">Введите число от 1 до 100!</p>
+                         <p class="par" id="str"></p>
                 <div class="allButtons">
-                    <button class="button" type="button">go</button>
-                    <button  class="resetButton" type="reset">reset</button>
+                    <button class="button" type="button">Угадать</button>
+                    <button  class="resetButton" type="reset">Заново</button>
                 </div>
-                <p class="condition">Введите число от 1 до 100!</p>
-                <p class="par" id="str"></p>
             </div>
         </form>
-   
+    </div>
     <script src="src/js/GenNumJS.js"></script>
 </body>
 
