@@ -120,6 +120,11 @@ button{
     font-family: "Tahoma";
     font-weight: 700;
 }
+
+.button{
+	display: inline-block;
+}
+
 .condition{
 	position: absolute;
 	min-width: 100%;

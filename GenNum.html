@@ -18,13 +18,17 @@
             </p>
             <button id="start"><p>Сыграеееееем</p></button>
         </div>
-        <div class="wrapper">
-            <input type="number" class='userNum'>
-            <button class="button">go</button>
-            <p class="condition">Введите число от 1 до 100!</p>
-            <p class="par" id="str"></p>
-        </div>
-    </div>
+        <form name="thGame">
+            <div class="wrapper">
+                <input type="number" class='userNum'>
+                <div class="allButtons">
+                    <button class="button" type="button">go</button>
+                    <button  class="resetButton" type="reset">reset</button>
+                </div>
+                <p class="condition">Введите число от 1 до 100!</p>
+                <p class="par" id="str"></p>
+            </div>
+        </form>
    
     <script src="src/js/GenNumJS.js"></script>
 </body>
