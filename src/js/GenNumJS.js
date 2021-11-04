@@ -3,6 +3,9 @@ const numButton = document.querySelector('.button');
 const resetButton = document.querySelector('.resetButton');
 const condition = document.querySelector('.condition');
 const result = document.querySelector('.par');
+let numberTries = 5;
+function random(max) { return Math.floor(Math.random() * (max + 1)); }
+let secretNumber = random(100);
 
 numInput.addEventListener("click", function () {
     condition.classList.add('active');
@@ -22,7 +25,7 @@ numButton.addEventListener("click", function () {
 });
 
 resetButton.addEventListener("click", function () {
-    result.classList.add('active');
     result.innerHTML = '';
-    //функция рандом и обнуление попыток
+    numberTries = 5;
+    secretNumber = random(100);
 })
