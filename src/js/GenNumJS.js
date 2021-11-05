@@ -45,6 +45,7 @@ function checkGuess(inputNumber) {
   // guessField.value = '';
   // guessField.focus();
 }
+
   dom.startButton.addEventListener(clickword, function () {
     dom.rulesBlock.classList.add(hiddenElement);
     dom.game.classList.remove(hiddenElement);
