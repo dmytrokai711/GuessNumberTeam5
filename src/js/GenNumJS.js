@@ -1,99 +1,78 @@
-const numInput = document.querySelector('.userNum');
-const rulesBlock = document.querySelector('.rules');
-const numButton = document.querySelector('.button');
-const resetButton = document.querySelector('.resetButton');
-const condition = document.querySelector('.condition');
-const result = document.querySelector('.par');
-const game = document.querySelector('.game');
-const startButton = document.querySelector('#start');
-const randomNumber = Math.floor(Math.random() * 100) + 1;
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+let prevTry = dom.numInput.value;
+let sekretNumber;
 
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
+function getRandom(max) { return Math.floor(Math.random() * (max + 1)); }
 
-const guessCount = 5;
-
-//const numberTries = 5;
-function random(max) { return Math.floor(Math.random() * (max + 1)); }
-
-startButton.addEventListener("click", function () {
-    rulesBlock.classList.add('hidden');
-    game.classList.remove('hidden')
-});
-numInput.addEventListener("click", function () {
-    condition.classList.add('active');
-});
-
-numButton.addEventListener("click", function () {
-    result.classList.add('active');
-    if (numInput.value < 1) {
-        result.innerHTML = 'Число ' + numInput.value + ' меньше 1!';
+function progressbar(){
+  if (COUNT == 0) {
+    COUNT = 1;
+    let elem = document.getElementById();
+    const width = 10;
+    let id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        COUNT = 0;
+      } else {
+        width++;
+        elem.style.width = 50 + "%";
+        elem.innerHTML = 50 + "%";
+      }
     }
-    else if (numInput.value > 100) {
-        result.innerHTML = 'Число ' + numInput.value + ' Больше 100!';
+  }
+}; 
+
+function checkGuess(inputNumber) {
+  // const userGuess = Number(guessField.value);
+  
+  // if (guessCount === 1) {
+  //   guesses.textContent = 'Число из прошлой попытки =';
+  // }
+  // guesses.textContent += userGuess + ' ';
+
+  switch(true){
+    case inputNumber === randomNumber: 
+      result.innerHTML = 'Поздравляем! Вы угадали!';
+    break;
+    case (inputNumber - randomNumber) > (prevTry - randomNumber): 
+      result.innerHTML = 'Холоднее!!!!!!!';
+    break;
+    case (inputNumber - randomNumber) < (prevTry - randomNumber):result.innerHTML = 'Теплее!!!!!!!';
+    break;
+
+  }
+  // guessCount++;
+  // guessField.value = '';
+  // guessField.focus();
+}
+  dom.startButton.addEventListener(clickword, function () {
+    dom.rulesBlock.classList.add(hiddenElement);
+    dom.game.classList.remove(hiddenElement);
+    sekretNumber = getRandom(100);
+});
+  dom.numInput.addEventListener(clickword, function () {
+    dom.condition.classList.add(activeword);
+});
+
+  dom.numButton.addEventListener(clickword, function () {
+    dom.result.classList.add(activeword);
+    if (dom.numInput.value < 1) {
+      dom.result.innerHTML = 'Число ' + dom.numInput.value + ' меньше 1!';
     }
-    else if (numInput.value >= 1 && numInput.value <= 100) {
-        //вызов функции
+    else if (dom.numInput.value > 100) {
+      dom.result.innerHTML = 'Число ' + dom.numInput.value + ' Больше 100!';
+    }
+    else if (dom.numInput.value >= 1 && dom.numInput.value <= 100) {
+        checkGuess(dom.numInput.value);
     }
 });
 
 
-resetButton.addEventListener("click", function () {
-    game.classList.add('hidden');
-    rulesBlock.classList.remove('hidden')
-    /*result.innerHTML = '';
-    numberTries = 5;
+dom.resetButton.addEventListener(clickword, function () {
+  dom.game.classList.add(hiddenElement);
+  dom.rulesBlock.classList.remove(hiddenElement);
+  dom.result.innerHTML = '';
+    /*numberTries = 5;
     secretNumber = random(100);*/
 })
-
-function checkGuess() {
-    const userGuess = Number(guessField.value);
-    if (guessCount === 1) {
-      guesses.textContent = 'Число из прошлой попытки =';
-    }
-    guesses.textContent += userGuess + ' ';
   
-    if (userGuess === randomNumber) {
-      lastResult.textContent = 'Поздравляем! Вы угадали!';
-      //lastResult.style.backgroundColor = 'green';
-      lowOrHi.textContent = '';
-      setGameOver();
-    } else if (guessCount === 10) {
-      lastResult.textContent = '!!!GAME OVER!!!';
-      setGameOver();
-    } else {
-      lastResult.textContent = 'Неверно. Попробуйте снова!';
-      //lastResult.style.backgroundColor = 'red';
-      if(userGuess < randomNumber) {
-        lowOrHi.textContent = 'Теплее!';
-      } else if(userGuess > randomNumber) {
-        lowOrHi.textContent = 'Холоднее!';
-      }
-    }
-    guessCount++;
-    guessField.value = '';
-    guessField.focus();
-  }
-  
-  let progresscount  = 0;
-  function progressbar(){
-    if (progresscount == 0) {
-      progresscount = 1;
-      let elem = document.getElementById();
-      const width = 10;
-      let id = setInterval(frame, 10);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          progresscount = 0;
-        } else {
-          width++;
-          elem.style.width = 50 + "%";
-          elem.innerHTML = 50 + "%";
-        }
-      }
-    }
-  }; 
