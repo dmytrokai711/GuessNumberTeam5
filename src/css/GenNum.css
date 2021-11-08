@@ -40,7 +40,7 @@ html,body{
 
 .rules { 
 	width: 650px;
-	text-align: left;
+	text-align: center;
 	font-size: 24px;
 	border: 3px solid #ff2a6d;
 	padding: 10px;
@@ -112,18 +112,51 @@ input[type='number'] {
 }
 button{
 	width: 185px;
-	height: 35px;
-	background-color: #d0f3e9;
+	height: 50px;
+	background-color: #99cfe4;
 	border: 2px solid #ff2a6d;
+	color: #01012b;
 	border-radius: 10px; 
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
     -khtml-border-radius: 10px; 
-	margin-right: 20px;
-	margin-top: 20px;
     text-transform: uppercase;
     font-family: "Tahoma";
     font-weight: 700;
+}
+button:hover{
+	box-shadow: 0 0 30px #58b3d6;
+}
+
+.resetButton:hover{
+
+	background-color: #ff2a6d;
+	color: #01012b;
+	border: 2px solid #01012b;
+}
+
+#start{
+	background-color: #7cc8e6;;
+	color: #01012b;
+	border: 2px solid #01012b;
+}
+
+.button:hover{
+
+	background-color: #7cc8e6;;
+	color: #01012b;
+	border: 2px solid #01012b;
+}
+
+.allButtons{
+	padding: 20px 0 0 10px;
+}
+
+.resetButton{
+	background-color: #01012b;
+	border: 2px solid #ff2a6d;
+	color: #ff2a6d;
+
 }
 
 .condition{
@@ -165,23 +198,14 @@ button{
     width: 0px;
     height: 10px;
     border-radius: 15px;
-    animation: progres 10s infinite linear;    
+    animation: progres 10s infinite ease-in-out;    
 }
 .color{
 	margin: -5px 0 10px 0;
 }
 @keyframes progres{
     0%{
-      width: 0%;
-    }
-    25%{
-        width: 50%;
-    }
-    50%{
-        width: 75%;
-    }
-    75%{
-        width: 85%;
+      width: 0;
     }
     100%{
         width: 100%;
