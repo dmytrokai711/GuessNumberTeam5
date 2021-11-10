@@ -1,9 +1,10 @@
-let prevTry = dom.numInput.value;
 let sekretNumber;
+let numberTries = 5;
+let prevTry = -1;
 
-function getRandom(max) { return Math.floor(Math.random() * (max + 1)); }
+function getRandom(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
-function progressbar(){
+function progressbar() {
   if (COUNT == 0) {
     COUNT = 1;
     let elem = document.getElementById();
@@ -20,60 +21,76 @@ function progressbar(){
       }
     }
   }
-}; 
+};
 
-function checkGuess(inputNumber) {
-  // const userGuess = Number(guessField.value);
-  
-  // if (guessCount === 1) {
-  //   guesses.textContent = 'Число из прошлой попытки =';
-  // }
-  // guesses.textContent += userGuess + ' ';
-
-  switch(true){
-    case inputNumber === randomNumber: 
-      result.innerHTML = 'Поздравляем! Вы угадали!';
-    break;
-    case (inputNumber - randomNumber) > (prevTry - randomNumber): 
-      result.innerHTML = 'Холоднее!!!!!!!';
-    break;
-    case (inputNumber - randomNumber) < (prevTry - randomNumber):result.innerHTML = 'Теплее!!!!!!!';
-    break;
+function checkGuess(inputNumber, randomNumber) {
+  switch (true) {
+    case inputNumber === randomNumber:{
+      dom.numButton.setAttribute('disabled', 'disabled');
+      dom.numButton.style.opacity = "0.3";
+      return 'Поздравляем! Вы угадали!';
+    }
+    case Math.abs(inputNumber - randomNumber) > Math.abs(prevTry - randomNumber): {
+      prevTry = inputNumber;
+      numberTries--;
+      return 'Холоднее!!!!!!!';
+    }
+    case Math.abs(inputNumber - randomNumber) < Math.abs(prevTry - randomNumber): {
+      prevTry = inputNumber;
+      numberTries--;
+      return 'Теплее!!!!!!!';
+    }
+    case prevTry === inputNumber: {
+      numberTries--;
+      return 'Уже было!!!!';
+    }
+    default: return 'Что-то пошло не так...'
 
   }
-  // guessCount++;
-  // guessField.value = '';
-  // guessField.focus();
 }
 
-  dom.startButton.addEventListener(clickword, function () {
-    dom.rulesBlock.classList.add(hiddenElement);
-    dom.game.classList.remove(hiddenElement);
-    sekretNumber = getRandom(100);
-});
-  dom.numInput.addEventListener(clickword, function () {
-    dom.condition.classList.add(activeword);
+dom.startButton.addEventListener(clickword, function () {
+  dom.rulesBlock.classList.add(hiddenElement);
+  dom.game.classList.remove(hiddenElement);
+  sekretNumber = getRandom(1, 100);
 });
 
-  dom.numButton.addEventListener(clickword, function () {
-    dom.result.classList.add(activeword);
-    if (dom.numInput.value < 1) {
+dom.numInput.addEventListener(clickword, function () {
+  dom.condition.classList.add(activeword);
+});
+
+dom.numButton.addEventListener(clickword, function () {
+  dom.result.classList.add(activeword);
+  switch (true) {
+    case numberTries === 0: {
+      dom.numButton.setAttribute('disabled', 'disabled');
+      dom.numButton.style.opacity = "0.3";
+      dom.result.innerHTML = 'Ты проиграл(а)!';
+    }
+      break;
+    case (dom.numInput.value < 1): {
+      numberTries--;
       dom.result.innerHTML = 'Число ' + dom.numInput.value + ' меньше 1!';
     }
-    else if (dom.numInput.value > 100) {
+      break;
+    case (dom.numInput.value > 100): {
+      numberTries--;
       dom.result.innerHTML = 'Число ' + dom.numInput.value + ' Больше 100!';
     }
-    else if (dom.numInput.value >= 1 && dom.numInput.value <= 100) {
-        checkGuess(dom.numInput.value);
-    }
+      break;
+    case (dom.numInput.value >= 1 && dom.numInput.value <= 100):
+      dom.result.innerHTML = checkGuess(+dom.numInput.value, sekretNumber);
+      break;
+    default: dom.result.innerHTML = 'Что-то пошло не так...';
+  }
 });
-
 
 dom.resetButton.addEventListener(clickword, function () {
   dom.game.classList.add(hiddenElement);
   dom.rulesBlock.classList.remove(hiddenElement);
+  dom.numButton.removeAttribute('disabled', 'disabled');
+  dom.numButton.style.opacity = "1";
   dom.result.innerHTML = '';
-    /*numberTries = 5;
-    secretNumber = random(100);*/
+  numberTries = 5;
+  secretNumber = getRandom(1, 100);
 })
-  
