@@ -1,6 +1,7 @@
 
 
 const dom = {
+    progress: document.querySelector('.color'),
     numInput: document.querySelector('.userNum'),
     rulesBlock: document.querySelector('.rules'),
     numButton: document.querySelector('.button'),
@@ -9,7 +10,7 @@ const dom = {
     result: document.querySelector('.par'),
     game: document.querySelector('.game'),
     startButton: document.querySelector('#start'),
-     guesses: document.querySelector('.guesses'),
+    guesses: document.querySelector('.guesses'),
     lastResult: document.querySelector('.lastResult'),
     lowOrHi: document.querySelector('.lowOrHi'),
     guessSubmit: document.querySelector('.guessSubmit'),
