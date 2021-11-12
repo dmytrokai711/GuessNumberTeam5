@@ -25,7 +25,7 @@ function progressbar() {
 
 function checkGuess(inputNumber, randomNumber) {
   switch (true) {
-    case inputNumber === randomNumber:{
+    case inputNumber === randomNumber: {
       dom.numButton.setAttribute('disabled', 'disabled');
       dom.numButton.style.opacity = "0.3";
       return 'Поздравляем! Вы угадали!';
