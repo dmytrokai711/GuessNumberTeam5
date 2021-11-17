@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="shortcut icon" href="img/icons8-игральный-кубик-96.png">
+    <link rel="stylesheet" href="src/css/genNum.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="imgrandom">
+            <img src="img/randomizer (2).png" alt="Ничего не загрузилось!" class="cyber">
+        </div>
+        <div class="progress">
+            <div class="color"></div>
+        </div>
+        <div class="rules">
+            <h1>Правила</h1>
+            <p> Привет, я загадал число от 1 до 100. Попробуй угадать его за 5 попыток! Хмм, кажется я слегка переборщил
+                с диапазон чисел. Ладно, так и быть, я буду тебе подсказывать, начиная со второй попытки и только со
+                второй.
+                Если ты будешь ближе к загаданому числу, то я буду говорить “Теплее!”, а если дальше, то “Холоднее!”. Ну что, попробуешь угадать?
+            </p>
+            <button id="start">
+                <p class="startText">ИГРАТЬ!</p>
+            </button>
+        </div>
+        <form name="thGame" action="#" class="game hidden" id="gamearea">
+            <div class="wrapper">
+                <p class="condition">Введите число от 1 до 100!</p>
+                <input type="number"  class='userNum'>
+                <p class="par" id="str"></p>
+                <div class="allButtons">
+                    <button class="resetButton" type="reset">Заново</button>
+                    <button class="button" type="button">Угадать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./src/js/dom.js"></script>
+    <script src="./src/js/constants.js"></script>
+    <script src="./src/js/genNumJS.js"></script>
+</body>
+
+</html>
