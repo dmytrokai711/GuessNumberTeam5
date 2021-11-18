@@ -72,7 +72,7 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body{
-	/*overflow: hidden;*/
+	overflow: hidden;
     background-color: #01012b;
 }
 body ::selection{
@@ -108,6 +108,7 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 #gamearea{
+	background-color: #010135;
 	border:3px solid #ff2a6d;
 	height: 520px;
 	margin-top: 7px;
@@ -248,8 +249,10 @@ button:hover{
 	width: 650px;
 }
 .changeTheme{
+	border: #01013500;
+	background-color: #01013500;
 	position: absolute;
-	width: 20px;
-	height: 20px;
+	width: 1px;
+	height: 1px;
 	border-radius: 10px;
 }

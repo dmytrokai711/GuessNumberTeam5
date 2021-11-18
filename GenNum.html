@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randomizer</title>
-    <link rel="shortcut icon" href="img/icons8-игральный-кубик-96.png">
-    <link href="src/css/mocha.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="src/css/genNum.css" class="theme dark">
+    <link rel="shortcut icon" href="./img/logoIcon.png">
+    <link href="src/css/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/genNum.css" class="theme dark">
 </head>
 
-<body> 
+<body>
     <div>
-    <button class="changeTheme"></button>
-</div>
+        <button class="changeTheme"><img class="lamp" src="./img/lamp.png" alt="" width="30pxpx"></button>
+    </div>
     <div class="form">
         <div class="imgrandom">
             <img src="img/randomizer (2).png" alt="Ничего не загрузилось!" class="cyber">
@@ -27,16 +27,17 @@
             <p> Привет, я загадал число от 1 до 100. Попробуй угадать его за 5 попыток! Хмм, кажется я слегка переборщил
                 с диапазон чисел. Ладно, так и быть, я буду тебе подсказывать, начиная со второй попытки и только со
                 второй.
-                Если ты будешь ближе к загаданому числу, то я буду говорить “Теплее!”, а если дальше, то “Холоднее!”. Ну что, попробуешь угадать?
+                Если ты будешь ближе к загаданому числу, то я буду говорить “Теплее!”, а если дальше, то “Холоднее!”. Ну
+                что, попробуешь угадать?
             </p>
             <button id="start">
                 <p class="startText">ИГРАТЬ!</p>
             </button>
         </div>
-        <div name ="thGame" action="#" class="game hidden" id="gamearea">
+        <div name="thGame" action="#" class="game hidden" id="gamearea">
             <div class="wrapper">
                 <p class="condition">Введите число от 1 до 100!</p>
-                <input type="number"  class='userNum'>
+                <input type="number" class='userNum'>
                 <p class="par" id="str"></p>
                 <div class="allButtons">
                     <button class="resetButton" type="reset">Заново</button>
@@ -60,7 +61,7 @@
     <script>
         mocha.run();
     </script>
-    
+
 </body>
 
 </html>
