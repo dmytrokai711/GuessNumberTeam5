@@ -23,7 +23,7 @@ function reset() {
   prevTry = 0;
 }
 function getRandom(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-function startPlaying () {
+function startPlaying() {
   dom.result.classList.add(activeword);
   switch (true) {
     case numberTries === 0: {
@@ -42,7 +42,7 @@ function startPlaying () {
       break;
     case (dom.numInput.value >= 1 && dom.numInput.value <= 100):
       dom.result.innerHTML = checkGuess(+dom.numInput.value, sekretNumber);
-      dom.progress.style.width = numberTries*20+'%';
+      dom.progress.style.width = numberTries * 20 + '%';
       break;
     default: dom.result.innerHTML = 'Что-то пошло не так...';
   }
@@ -79,3 +79,11 @@ function checkGuess(inputNumber, randomNumber) {
 dom.startButton.addEventListener(clickword, start);
 dom.numButton.addEventListener(clickword, startPlaying);
 dom.resetButton.addEventListener(clickword, reset)
+
+dom.chengeTheme.addEventListener('click', function () {
+  if (dom.theme.getAttribute("href") == "src/css/genNum.css") {
+    dom.theme.href = "src/css/lightTeme.css";
+  } else {
+    dom.theme.href = "src/css/genNum.css";
+  }
+})
