@@ -14,5 +14,11 @@ const dom = {
     lastResult: document.querySelector('.lastResult'),
     lowOrHi: document.querySelector('.lowOrHi'),
     guessSubmit: document.querySelector('.guessSubmit'),
-    guessField: document.querySelector('.guessField')
+    guessField: document.querySelector('.guessField'),
+    settings: document.querySelector('.setting'),
+    settingsButt: document.querySelector('.settings'),
+    min: document.querySelector('.min'),
+    max: document.querySelector('.max'),
+    count: document.querySelector('.count'),
+    set: document.querySelector('.setButton')
 }
