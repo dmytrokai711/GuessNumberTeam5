@@ -19,7 +19,7 @@ function reset() {
   prevTry = 0;
 }
 function getRandom(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-function startPlaying () {
+function startPlaying() {
   dom.result.classList.add(activeword);
   switch (true) {
     case numberTries === 0: {
@@ -38,7 +38,7 @@ function startPlaying () {
       break;
     case (dom.numInput.value >= 1 && dom.numInput.value <= 100):
       dom.result.innerHTML = checkGuess(+dom.numInput.value, sekretNumber);
-      dom.progress.style.width = numberTries*20+'%';
+      dom.progress.style.width = numberTries * 20 + '%';
       break;
     default: dom.result.innerHTML = 'Что-то пошло не так...';
   }
@@ -73,14 +73,18 @@ function checkGuess(inputNumber, randomNumber) {
   }
 }
 function changeTheme() {
-  if (dom.theme.getAttribute("href") === "src/css/genNum.css") {
-    dom.theme.classList.add('light') 
+  if (dom.theme.getAttribute("href") === "./src/css/genNum.css") {
+    dom.theme.classList.add('light')
     dom.theme.classList.remove('dark')
     dom.theme.href = "./src/css/lightTeme.css";
+    dom.lamp.src = "./img/lightLamp.png"
+    dom.logo.src = "./img/randomizerLight.png"
   } else {
     dom.theme.classList.add('dark')
     dom.theme.classList.remove('light')
     dom.theme.href = "./src/css/genNum.css";
+    dom.lamp.src = "./img/lamp.png"
+    dom.logo.src = "./img/randomizer (2).png"
   }
 }
 dom.changeTheme.addEventListener('click', changeTheme)
