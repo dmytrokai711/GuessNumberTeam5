@@ -3,7 +3,6 @@ let numberTries = COUNT;
 let prevTry = 0;
 
 function start() {
-  //startPlaying();
   dom.rulesBlock.classList.add(hiddenElement);
   dom.game.classList.remove(hiddenElement);
   sekretNumber = getRandom(1, 100);
@@ -75,9 +74,13 @@ function checkGuess(inputNumber, randomNumber) {
 }
 function changeTheme() {
   if (dom.theme.getAttribute("href") === "src/css/genNum.css") {
-    dom.theme.href = "src/css/lightTeme.css";
+    dom.theme.classList.add('light') 
+    dom.theme.classList.remove('dark')
+    dom.theme.href = "./src/css/lightTeme.css";
   } else {
-    dom.theme.href = "src/css/genNum.css";
+    dom.theme.classList.add('dark')
+    dom.theme.classList.remove('light')
+    dom.theme.href = "./src/css/genNum.css";
   }
 }
 dom.changeTheme.addEventListener('click', changeTheme)
