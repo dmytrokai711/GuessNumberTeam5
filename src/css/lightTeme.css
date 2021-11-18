@@ -34,7 +34,7 @@ html,body{
 .form { 
 	width: 650px;
     margin : 20px auto;
-	color: #69ebf5;
+	color: #3D348B;
 }
 
 .rules h1 {
@@ -44,11 +44,12 @@ html,body{
 }
 
 .rules { 
+    background-color: #FFF8F0;
 	width: 650px;
 	height: 520px;
 	text-align: center;
 	font-size: 24px;
-	border: 3px solid #ff2a6d;
+	border: 3px solid #FF8811;
 	border-radius: 10px;
 	padding: 10px;
 	line-height: 1.7;
@@ -72,8 +73,7 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body{
-	/*overflow: hidden;*/
-    background-color: #01012b;
+    background-color: #FFF8F0;
 }
 body ::selection{
 	background-color :#ff2a6e6b;
@@ -81,13 +81,13 @@ body ::selection{
 }
 .userNum {
 	margin-top: 50px;
-    border: 3px solid #ff2a6d; 
-    color: #69ebf5;
+    border: 3px solid #FF8811; 
+    color: #3D348B;
     border-radius: 10px; 
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
     -khtml-border-radius: 10px; 
-    background: #ff2a6e25; 
+    background: #ff88110e; 
     outline: none; 
     height: 60px;
     width: 400px; 
@@ -96,7 +96,7 @@ body ::selection{
     text-align: center; 
  }
  .userNum:focus{
-    box-shadow: 0 0 30px #58b3d6;
+    box-shadow: 0 0 30px #3D348B;
  }
 
  input::-webkit-outer-spin-button,
@@ -108,7 +108,7 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 #gamearea{
-	border:3px solid #ff2a6d;
+	border:3px solid #FF8811;
 	height: 520px;
 	margin-top: 7px;
 	border-radius: 10px;
@@ -127,9 +127,9 @@ button{
 	font-size: 24px;
 	width: 185px;
 	height: 50px;
-	background-color: #99cfe4;
-	border: 2px solid #ff2a6d;
-	color: #01012b;
+	background-color: #FF8811;
+	border: 2px solid #3D348B;
+	color: #FFF8F0;
 	border-radius: 10px; 
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
@@ -138,31 +138,30 @@ button{
     font-weight: 700;
 }
 button:hover{
-	box-shadow: 0 0 30px #58b3d6;
+	box-shadow: 0 0 30px #3D348B;
 }
 .resetButton:hover{
 
-	background-color: #ff2a6d;
-	color: #01012b;
-	border: 2px solid #01012b;
+	background-color: #FF8811;
+	color: #FFF8F0;
+	border: 2px solid #FFF8F0;
 }
-#start:hover{
-
-	background-color: #ff2a6d;
-	color: #01012b;
-	border: 2px solid #01012b;
-}
-
 
 #start{
-	background-color: #01012b;
-	border: 2px solid #ff2a6d;
-	color: #ff2a6d;
+	background-color: #FFF8F0;
+	border: 2px solid #FF8811;
+	color: #FF8811;
 	width: 200px;
 	margin : 40px auto;
 	display: flex;	
 	justify-content: center;
 
+}
+#start:hover{
+
+	background-color: #FF8811;
+	color: #FFF8F0;
+	border: 2px solid #FFF8F0;
 }
 .startText{
 	font-size: 24px;
@@ -170,9 +169,9 @@ button:hover{
 
 .button:hover{
 
-	background-color: #7cc8e6;;
-	color: #01012b;
-	border: 2px solid #01012b;
+	background-color: #3D348B;;
+	color: #FF8811;
+	border: 2px solid #FF8811;
 }
 
 .allButtons{
@@ -182,9 +181,9 @@ button:hover{
 
 .resetButton{
 
-	background-color: #01012b;
-	border: 2px solid #ff2a6d;
-	color: #ff2a6d;
+	background-color: #FFF8F0;
+	border: 2px solid #FF8811;
+	color: #FF8811;
 
 }
 
@@ -214,14 +213,14 @@ button:hover{
 .progress{
     height: 20px;
     width: 100%;
-    border: 10px solid #ff2a6d;
+    border: 10px solid #FF8811;
     border-radius: 15px;
 	animation-name: grow;
   	animation-duration: 3s;
   	animation-fill-mode: forwards;
 }
 .progress .color{
-    background-color: #05d9e8;
+    background-color: #3D348B;
     height: 10px;
     border-radius: 15px;
     animation: progres 10s infinite ease-in-out;    
