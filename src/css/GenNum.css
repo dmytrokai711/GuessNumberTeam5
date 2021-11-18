@@ -202,18 +202,6 @@ button:hover{
 	top : 27%;
 }
 
-.resetButton{
-	/* background-image: url( '/img/settings\ \(1\).png' )center no-repeat;  */
-	/* background-size: 100% 100%;; */
-	background-color: #01012b;
-    height: 100px;  
-    width: 100px;
-	border: 2px solid #01012b;
-	color: #ff2a6d;
-	margin-right: 10px;
-
-}
-
 .condition{
 	text-shadow: 1px 1px 12px #ffffff;
 	font-size: 30px;

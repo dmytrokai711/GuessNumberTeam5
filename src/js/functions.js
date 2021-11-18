@@ -2,6 +2,22 @@ let sekretNumber;
 let numberTries = dom.count.value;
 let prevTry;
 
+function changeTheme() {
+    if (dom.theme.getAttribute("href") === "./src/css/genNum.css") {
+      dom.theme.classList.add('light')
+      dom.theme.classList.remove('dark')
+      dom.theme.href = "./src/css/lightTeme.css";
+      dom.lamp.src = "./img/lightLamp.png"
+      dom.logo.src = "./img/randomizerLight.png"
+    } else {
+      dom.theme.classList.add('dark')
+      dom.theme.classList.remove('light')
+      dom.theme.href = "./src/css/genNum.css";
+      dom.lamp.src = "./img/lamp.png"
+      dom.logo.src = "./img/randomizer (2).png"
+    }
+  }
+
 function start() {
     document.querySelector('#gamearea').addEventListener('submit', (event) => {
         startPlaying();
