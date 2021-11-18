@@ -1,6 +1,8 @@
-
-
 const dom = {
+    logo: document.querySelector('.cyber'),
+    lamp: document.querySelector('.lamp'),
+    changeTheme: document.querySelector('.changeTheme'),
+    theme: document.querySelector('.theme'),
     progress: document.querySelector('.color'),
     numInput: document.querySelector('.userNum'),
     rulesBlock: document.querySelector('.rules'),
