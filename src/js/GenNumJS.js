@@ -73,6 +73,14 @@ function checkGuess(inputNumber, randomNumber) {
 
   }
 }
+function changeTheme() {
+  if (dom.theme.getAttribute("href") === "src/css/genNum.css") {
+    dom.theme.href = "src/css/lightTeme.css";
+  } else {
+    dom.theme.href = "src/css/genNum.css";
+  }
+}
+dom.changeTheme.addEventListener('click', changeTheme)
 dom.startButton.addEventListener(clickword, start);
 dom.numButton.addEventListener(clickword, startPlaying);
 dom.resetButton.addEventListener(clickword, reset)
