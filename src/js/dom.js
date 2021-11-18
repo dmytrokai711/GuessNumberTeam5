@@ -1,5 +1,3 @@
-
-
 const dom = {
     changeTheme: document.querySelector('.changeTheme'),
     theme: document.querySelector('.theme'),

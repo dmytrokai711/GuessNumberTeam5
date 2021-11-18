@@ -68,4 +68,14 @@ describe('Test our game', () => {
             expect(dom.numButton.hasAttribute('disabled')).to.equal(false);
         });
         })
+     describe('Try light mode', () => {
+        it('Should change mode', () => {
+            changeTheme();
+            expect(dom.theme.classList.contains('light')).to.equal(true);
+        });
+        it('Should change mode', () => {
+            changeTheme();
+            expect(dom.theme.classList.contains('dark')).to.equal(true);
+        });
+        })
 })
