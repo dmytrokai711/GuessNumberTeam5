@@ -141,7 +141,7 @@ input[type='number'] {
 }
 
 #gamearea{
-	border:3px solid #ff2a6d;
+	border:3px solid #FF8811;
 	height: 520px;
 	margin-top: 7px;
 	border-radius: 10px;
@@ -160,9 +160,9 @@ button{
 	font-size: 24px;
 	width: 185px;
 	height: 50px;
-	background-color: #99cfe4;
-	border: 2px solid #ff2a6d;
-	color: #01012b;
+	background-color: #FF8811;
+	border: 2px solid #3D348B;
+	color: #FFF8F0;
 	border-radius: 10px; 
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
@@ -171,26 +171,31 @@ button{
     font-weight: 700;
 }
 button:hover{
-	box-shadow: 0 0 30px #58b3d6;
+	box-shadow: 0 0 30px #3D348B;
+}
+.resetButton{
+	background-color: #FFF8F0;
+	color: #FF8811;
+	border: 2px solid #FF8811;
 }
 .resetButton:hover{
 
-	background-color: #ff2a6d;
-	color: #01012b;
-	border: 2px solid #01012b;
+	background-color: #FF8811;
+	color: #FFF8F0;
+	border: 2px solid #FFF8F0;
 }
 #start:hover{
 
-	background-color: #ff2a6d;
-	color: #01012b;
-	border: 2px solid #01012b;
+	background-color: #FF8811;
+	color: #FFF8F0;
+	border: 2px solid #FFF8F0;
 }
 
 
 #start{
-	background-color: #01012b;
-	border: 2px solid #ff2a6d;
-	color: #ff2a6d;
+	background-color: #FFF8F0;
+	border: 2px solid #FF8811;
+	color: #FF8811;
 	width: 200px;
 	margin : 40px auto;
 	display: flex;	
@@ -203,9 +208,9 @@ button:hover{
 
 .button:hover{
 
-	background-color: #7cc8e6;;
-	color: #01012b;
-	border: 2px solid #01012b;
+	background-color: #3D348B;;
+	color: #FF8811;
+	border: 2px solid #FF8811;
 }
 
 .allButtons{
@@ -239,14 +244,14 @@ button:hover{
 .progress{
     height: 20px;
     width: 100%;
-    border: 10px solid #ff2a6d;
+    border: 10px solid #FF8811;
     border-radius: 15px;
 	animation-name: grow;
   	animation-duration: 3s;
   	animation-fill-mode: forwards;
 }
 .progress .color{
-    background-color: #05d9e8;
+    background-color: #3D348B;
     height: 10px;
     border-radius: 15px;
     animation: progres 10s infinite ease-in-out;    
