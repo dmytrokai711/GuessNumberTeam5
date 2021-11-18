@@ -11,9 +11,7 @@
 </head>
 
 <body>
-    <div>
-        <button class="changeTheme"><img class="lamp" src="./img/lamp.png" alt="" width="30pxpx"></button>
-    </div>
+    <button type="button" class="settings hidden"><img src="./img/klipartz.com.png" alt="" width="50px"></button>
     <div class="form">
         <div class="imgrandom">
             <img src="img/randomizer (2).png" alt="Ничего не загрузилось!" class="cyber">
@@ -36,22 +34,31 @@
         <div name="thGame" action="#" class="game hidden" id="gamearea">
             <div class="wrapper">
                 <p class="condition">Введите число от 1 до 100!</p>
-                <input type="number" class='userNum'>
+                <input type="number" class='userNum imp'>
                 <p class="par" id="str"></p>
                 <div class="allButtons">
                     <button class="resetButton" type="reset">Заново</button>
                     <button class="button" type="button">Угадать</button>
                 </div>
             </div>
-        </form>
-        <button type="button" class="settings resetButton hidden">настройки</button>
+        </div>
         <div class="setting hidden">
-            <div>
-            <input type="number" class="userNum min" value="1">
-            <input type="number" class="userNum max" value="100">
-            <input type="number" class="userNum count" value="5">
+            <div class="options">
+                <div>
+                    <button class="changeTheme"><img class="lamp" src="./img/lamp.png" alt="" width="40px"></button>
+                </div>
+                <div>
+                    <p class="puk">Минимум:</p>
+                    <input type="number" class="imp min" value="1">
+                    <p class="puk">Максимум:</p>
+                    <input type="number" class="imp max" value="100">
+                    <p class="puk">Количество попыток:</p>
+                    <input type="number" class="imp count" value="5">
+                </div>
+                <div>
+                    <button class="setButton" type="button">Задать</button>
+                </div>
             </div>
-            <button class="setButton " type="button">Задать</button>
         </div>
     </div>
     <script src="./src/js/dom.js"></script>
