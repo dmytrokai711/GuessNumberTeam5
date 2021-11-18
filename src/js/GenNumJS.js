@@ -3,10 +3,7 @@ let numberTries = COUNT;
 let prevTry = 0;
 
 function start() {
-  document.querySelector('#gamearea').addEventListener('submit', (event) => {
-    startPlaying();
-    event.preventDefault();
-  });
+  //startPlaying();
   dom.rulesBlock.classList.add(hiddenElement);
   dom.game.classList.remove(hiddenElement);
   sekretNumber = getRandom(1, 100);
@@ -57,7 +54,7 @@ function checkGuess(inputNumber, randomNumber) {
     case numberTries === 5:
       prevTry = inputNumber;
       numberTries--;
-      return ' ';
+      return 'Попробуй еще раз';
     case Math.abs(inputNumber - randomNumber) > Math.abs(prevTry - randomNumber): {
       prevTry = inputNumber;
       numberTries--;

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randomizer</title>
     <link rel="shortcut icon" href="img/icons8-игральный-кубик-96.png">
+    <link href="src/css/mocha.css" rel="stylesheet"/>
     <link rel="stylesheet" href="src/css/genNum.css">
 </head>
 
@@ -29,7 +30,7 @@
                 <p class="startText">ИГРАТЬ!</p>
             </button>
         </div>
-        <form name="thGame" action="#" class="game hidden" id="gamearea">
+        <div name ="thGame" action="#" class="game hidden" id="gamearea">
             <div class="wrapper">
                 <p class="condition">Введите число от 1 до 100!</p>
                 <input type="number"  class='userNum'>
@@ -39,11 +40,24 @@
                     <button class="button" type="button">Угадать</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
+    <div id="mocha"></div>
+    <div id="messages"></div>
+    <div id="fixtures"></div>
+    <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/2.2.2/faker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.4.1/chai.js"></script>
     <script src="./src/js/dom.js"></script>
     <script src="./src/js/constants.js"></script>
     <script src="./src/js/genNumJS.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="./test/genNumJS.spec.js"></script>
+    <script>
+        mocha.run();
+    </script>
+    
 </body>
 
 </html>
