@@ -249,8 +249,10 @@ button:hover{
 	width: 650px;
 }
 .changeTheme{
+	border: #01013500;
+	background-color: #01013500;
 	position: absolute;
-	width: 20px;
-	height: 20px;
+	width: 1px;
+	height: 1px;
 	border-radius: 10px;
 }

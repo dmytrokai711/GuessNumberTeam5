@@ -83,7 +83,11 @@ dom.resetButton.addEventListener(clickword, reset)
 dom.chengeTheme.addEventListener('click', function () {
   if (dom.theme.getAttribute("href") == "src/css/genNum.css") {
     dom.theme.href = "src/css/lightTeme.css";
+    dom.lamp.src = "./img/lightLamp.png"
+    dom.logo.src = "./img/randomizerLight.png"
   } else {
     dom.theme.href = "src/css/genNum.css";
+    dom.lamp.src = "./img/lamp.png"
+    dom.logo.src = "./img/randomizer (2).png"
   }
 })

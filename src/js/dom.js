@@ -1,4 +1,6 @@
 const dom = {
+    logo: document.querySelector('.cyber'),
+    lamp: document.querySelector('.lamp'),
     chengeTheme: document.querySelector('.changeTheme'),
     theme: document.querySelector('.theme'),
     progress: document.querySelector('.color'),
