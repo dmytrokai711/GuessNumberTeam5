@@ -1,6 +1,9 @@
-
-
 const dom = {
+    imgSet: document.querySelector('.imgSet'),
+    logo: document.querySelector('.cyber'),
+    lamp: document.querySelector('.lamp'),
+    changeTheme: document.querySelector('.changeTheme'),
+    theme: document.querySelector('.theme'),
     progress: document.querySelector('.color'),
     numInput: document.querySelector('.userNum'),
     rulesBlock: document.querySelector('.rules'),
@@ -14,5 +17,12 @@ const dom = {
     lastResult: document.querySelector('.lastResult'),
     lowOrHi: document.querySelector('.lowOrHi'),
     guessSubmit: document.querySelector('.guessSubmit'),
-    guessField: document.querySelector('.guessField')
+    guessField: document.querySelector('.guessField'),
+    settings: document.querySelector('.setting'),
+    settingsButt: document.querySelector('.settings'),
+    min: document.querySelector('.min'),
+    max: document.querySelector('.max'),
+    count: document.querySelector('.count'),
+    set: document.querySelector('.setButton'),
+    condition: document.querySelector('.condition')
 }
