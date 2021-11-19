@@ -174,6 +174,13 @@ button{
 button:hover{
 	box-shadow: 0 0 30px #58b3d6;
 }
+
+.resetButton{
+	background-color: #01012b;
+	color: #ff2a6d;
+	border: 2px solid #ff2a6d;
+}
+
 .resetButton:hover{
 
 	background-color: #ff2a6d;
@@ -227,12 +234,12 @@ button:hover{
 	max-width: 550px;
 	text-align: center;
 	opacity: 0;
-	transition: all 0.3s ease 0s;
 }
 .par.active{
 	text-shadow: 1px 1px 12px #ffffff;
-	margin-top: 40px;
+	margin-top: 50px;
 	opacity: 1;
+	transition: all 0.3s ease 0s;
 }
 .progress{
     height: 20px;

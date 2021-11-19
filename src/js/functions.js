@@ -6,17 +6,19 @@ let max = +dom.max.value;
 
 function changeTheme() {
     if (dom.theme.getAttribute("href") === "./src/css/genNum.css") {
-        dom.theme.classList.add('light')
-        dom.theme.classList.remove('dark')
+        dom.theme.classList.add('light');
+        dom.theme.classList.remove('dark');
         dom.theme.href = "./src/css/lightTeme.css";
-        dom.lamp.src = "./img/lightLamp.png"
-        dom.logo.src = "./img/randomizerLight.png"
+        dom.lamp.src = "./img/lightLamp.png";
+        dom.logo.src = "./img/randomizerLight.png";
+        dom.imgSet.src="./img/klipartzLight.com.png";
     } else {
-        dom.theme.classList.add('dark')
-        dom.theme.classList.remove('light')
+        dom.theme.classList.add('dark');
+        dom.theme.classList.remove('light');
         dom.theme.href = "./src/css/genNum.css";
-        dom.lamp.src = "./img/lamp.png"
-        dom.logo.src = "./img/randomizer (2).png"
+        dom.lamp.src = "./img/lamp.png";
+        dom.logo.src = "./img/randomizer (2).png";
+        dom.imgSet.src="./img/klipartz.com.png"
     }
 }
 
@@ -24,7 +26,10 @@ function start() {
     dom.rulesBlock.classList.add(hiddenElement);
     dom.game.classList.remove(hiddenElement);
     dom.settingsButt.classList.remove(hiddenElement);
-    dom.condition.innerHTML = `Введите число от ${min} до ${max}!`
+    min = +dom.min.value;
+    max = +dom.max.value;
+    dom.condition.innerHTML = `Введите число от ${min} до ${max}!`;
+    dom.result.innerHTML = 'Ну давай вводи уже'
     sekretNumber = getRandom(min, max);
 }
 
@@ -40,6 +45,7 @@ function reset() {
     dom.settings.classList.add(hiddenElement);
     dom.settingsButt.classList.add(hiddenElement);
     dom.numButton.removeAttribute('disabled', 'disabled');
+    dom.condition.innerHTML = `Введите число от ${min} до ${max}!`;
     dom.progress.style.width = '100%'
     dom.numButton.style.opacity = "1";
     dom.result.innerHTML = '';
@@ -47,7 +53,7 @@ function reset() {
     sekretNumber = getRandom(min, max);
     prevTry = 0;
     numbers.splice(0);
-    dom.numInput.value = '';
+    
 }
 function newRules() {
     dom.game.classList.remove(hiddenElement);
@@ -55,15 +61,20 @@ function newRules() {
     dom.settingsButt.classList.remove(hiddenElement);
     min = +dom.min.value;
     max = +dom.max.value;
-    numberTries = +dom.count.value;
+    numberTries = +dom.count.value; 
+    dom.result.innerHTML = 'Ну давай вводи уже';
     dom.condition.innerHTML = `Введите число от ${min} до ${max}!`
+    dom.progress.style.width = '100%'
+    dom.numInput.value = '';
+    dom.numButton.removeAttribute('disabled', 'disabled');
+    dom.numButton.style.opacity = "1";
     sekretNumber = getRandom(min, max);
 }
 
 function getRandom(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
 function startPlaying() {
-    dom.result.classList.add(activeword);
+    //dom.result.classList.add(activeword);
     switch (true) {
         case numberTries === 0: {
             dom.numButton.setAttribute('disabled', 'disabled');
@@ -95,7 +106,7 @@ function checkGuess(inputNumber, randomNumber) {
             dom.numButton.style.opacity = "0.3";
             return 'Поздравляем! Вы угадали!';
         }
-        case numberTries === +dom.count.value:
+        case +numberTries === +dom.count.value:
             prevTry = inputNumber;
             numberTries--;
             return 'Попробуй еще раз';

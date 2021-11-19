@@ -1,4 +1,5 @@
 const dom = {
+    imgSet: document.querySelector('.imgSet'),
     logo: document.querySelector('.cyber'),
     lamp: document.querySelector('.lamp'),
     changeTheme: document.querySelector('.changeTheme'),
