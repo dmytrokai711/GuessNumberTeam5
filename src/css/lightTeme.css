@@ -35,7 +35,7 @@ html,body{
     /* width: 650px; */
 	height: 520px;
 	font-size: 24px;
-	border: 3px solid #ff2a6d;
+	border: 3px solid #FF8811;
 	border-radius: 10px;
 	padding: 10px;
 	line-height: 1.7;
@@ -172,7 +172,7 @@ button{
     font-weight: 700;
 }
 button:hover{
-	box-shadow: 0 0 30px #58b3d6;
+	box-shadow: 0 0 30px #3D348B;
 }
 .resetButton{
     background-color: #FFF8F0;
@@ -210,9 +210,9 @@ button:hover{
 
 .button:hover{
 
-	background-color: #7cc8e6;;
-	color: #01012b;
-	border: 2px solid #01012b;
+	background-color: #FF8811;
+	color: #FFF8F0;
+	border: 2px solid #3D348B;
 }
 
 .allButtons{
@@ -246,14 +246,14 @@ button:hover{
 .progress{
     height: 20px;
     /* width: 100%; */
-    border: 10px solid #ff2a6d;
+    border: 10px solid #FF8811;
     border-radius: 15px;
 	animation-name: grow;
   	animation-duration: 3s;
   	animation-fill-mode: forwards;
 }
 .progress .color{
-    background-color: #05d9e8;
+    background-color: #3D348B;
     height: 10px;
     border-radius: 15px;
     animation: progres 10s infinite ease-in-out;    
