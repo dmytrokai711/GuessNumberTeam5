@@ -202,6 +202,11 @@ button{
 button:hover{
 	box-shadow: 0 0 30px #58b3d6;
 }
+.resetButton{
+	background-color: #01012b;
+	color: #ff2a6d;
+	border: 2px solid #ff2a6d;
+}
 .resetButton:hover{
 
 	background-color: #ff2a6d;
