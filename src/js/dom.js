@@ -22,5 +22,6 @@ const dom = {
     min: document.querySelector('.min'),
     max: document.querySelector('.max'),
     count: document.querySelector('.count'),
-    set: document.querySelector('.setButton')
+    set: document.querySelector('.setButton'),
+    condition: document.querySelector('.condition')
 }

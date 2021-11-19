@@ -1,14 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Mocha Tests</title>
-    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <link rel="shortcut icon" href="./img/logoIcon.png">
     <link rel="stylesheet" href="./src/css/genNum.css" class="theme dark">
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet"/>
+    <meta name="vieport" content="width = devise - width">
 </head>
+
 <body>
-    <div>
-        <button class="changeTheme"><img class="lamp" src="./img/lamp.png" alt="" width="30pxpx"></button>
-    </div>
+    <button type="button" class="settings hidden"><img src="./img/klipartz.com.png" alt="" width="50px"></button>
     <div class="form">
         <div class="imgrandom">
             <img src="img/randomizer (2).png" alt="Ничего не загрузилось!" class="cyber">
@@ -31,11 +36,27 @@
         <div name="thGame" action="#" class="game hidden" id="gamearea">
             <div class="wrapper">
                 <p class="condition">Введите число от 1 до 100!</p>
-                <input type="number" class='userNum'>
+                <input type="number" class='userNum imp'>
                 <p class="par" id="str"></p>
                 <div class="allButtons">
                     <button class="resetButton" type="reset">Заново</button>
                     <button class="button" type="button">Угадать</button>
+                </div>
+            </div>
+        </div>
+        <div class="setting hidden">
+            <div class="options">
+                    <button class="changeTheme"><img class="lamp" src="./img/lamp.png" alt="" width="40px"></button>
+                <div>
+                    <p class="puk">Минимум:</p>
+                    <input type="number" class="imp min" value="1">
+                    <p class="puk">Максимум:</p>
+                    <input type="number" class="imp max" value="100">
+                    <p class="puk">Количество попыток:</p>
+                    <input type="number" class="imp count" value="5">
+                </div>
+                <div>
+                    <button class="setButton" type="button">Задать</button>
                 </div>
             </div>
         </div>
@@ -49,6 +70,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/1.4.1/chai.js"></script>
     <script src="../src/js/dom.js"></script>
     <script src="../src/js/constants.js"></script>
+    <script src="../src/js/functions.js"></script>
     <script src="../src/js/genNumJS.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="genNumJS.spec.js"></script>

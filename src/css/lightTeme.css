@@ -39,10 +39,10 @@ html,body{
 	border-radius: 10px;
 	padding: 10px;
 	line-height: 1.7;
-	text-indent: 50px;
 	margin-top: 7px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 .hidden {
 	display: none;
@@ -107,7 +107,7 @@ body::selection{
 	margin-right: auto;
 }
 .setButton{
-	margin: 10px 0 0 60px;
+	margin: 10px 0;
 }
 .imp {
     border: 3px solid #FF8811; 
@@ -159,7 +159,7 @@ input[type='number'] {
 }
 button{
 	font-size: 24px;
-	/* width: 185px; */
+	width: 185px; 
 	height: 50px;
 	background-color: #FF8811;
     border: 2px solid #3D348B;
@@ -198,7 +198,7 @@ button:hover{
     border: 2px solid #FF8811;
     color: #FF8811;
     width: 200px;
-    margin : 40px auto;
+    margin : 30px auto;
     display: flex;
     justify-content: center;
 
@@ -216,7 +216,7 @@ button:hover{
 }
 
 .allButtons{
-	margin-top: 100px;
+	margin-top: 50px;
 	padding: 20px 0 0 10px;
 }
 
@@ -232,11 +232,8 @@ button:hover{
 	font-size: 30px;
 	/* width: 550px; */
 	text-align: center;
-	position: absolute;
-	
 	opacity: 0;
 	transition: all 0.3s ease 0s;
-
 }
 .par.active{
 	text-shadow: 1px 1px 12px #ffffff;

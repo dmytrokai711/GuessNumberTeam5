@@ -78,4 +78,22 @@ describe('Test our game', () => {
             expect(dom.theme.classList.contains('dark')).to.equal(true);
         });
         })
+        describe('Try to show and hide settings', () => {
+            it('Should show', () => {
+                settingGame()
+                expect(dom.settings.classList.contains(hiddenElement)).to.equal(false);
+            });
+            it('Should hide', () => {
+                newRules();
+                expect(dom.settings.classList.contains(hiddenElement)).to.equal(true);
+            });
+            })
+        describe('Try to change range', () => {
+            it('Should show range', () => {
+                dom.min.value = '100';
+                dom.max.value = '200';
+                newRules();
+                expect(dom.condition.innerHTML).to.equal('Введите число от 100 до 200!');
+            });
+            })
 })

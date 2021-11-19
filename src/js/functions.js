@@ -24,6 +24,7 @@ function start() {
     dom.rulesBlock.classList.add(hiddenElement);
     dom.game.classList.remove(hiddenElement);
     dom.settingsButt.classList.remove(hiddenElement);
+    dom.condition.innerHTML = `Введите число от ${min} до ${max}!`
     sekretNumber = getRandom(min, max);
 }
 
@@ -55,18 +56,14 @@ function newRules() {
     min = +dom.min.value;
     max = +dom.max.value;
     numberTries = +dom.count.value;
-    console.log(min);
-    console.log(max);
+    dom.condition.innerHTML = `Введите число от ${min} до ${max}!`
     sekretNumber = getRandom(min, max);
-
-
 }
 
 function getRandom(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
 function startPlaying() {
     dom.result.classList.add(activeword);
-    console.log(numberTries)
     switch (true) {
         case numberTries === 0: {
             dom.numButton.setAttribute('disabled', 'disabled');
@@ -79,7 +76,7 @@ function startPlaying() {
         }
             break;
         case (+dom.numInput.value > max): {
-            dom.result.innerHTML = 'Число ' + dom.numInput.value + `Больше ${max}!`;
+            dom.result.innerHTML = 'Число ' + dom.numInput.value + ` Больше ${max}!`;
         }
             break;
         case (+dom.numInput.value >= min && dom.numInput.value <= max):
