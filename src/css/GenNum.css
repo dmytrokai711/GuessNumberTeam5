@@ -33,7 +33,7 @@ html,body{
 	flex-direction: column;
 	justify-content: center;
     max-width: 650px;
-	height: 520px;
+	height: 550px;
 	font-size: 24px;
 	border: 3px solid #ff2a6d;
 	border-radius: 10px;
@@ -110,7 +110,7 @@ body ::selection{
 	margin-right: auto;
 }
 .setButton{
-	margin: 10px 0;
+	margin: 25px 0;
 }
 .imp {
     border: 3px solid #ff2a6d; 
@@ -294,8 +294,12 @@ button:hover{
 	height: 1px;
 	border: #01012b00;
 	background-color: #01012b00;
-	margin-left: 90%;
-	margin-top: 40px;
+}
+.settingWrap{
+	display: flex;
+	justify-content: right;
+	margin-right: 60px;
+	margin-top: 10px;
 }
 
 
@@ -345,7 +349,7 @@ button:hover{
 		max-width: 160px;
 	}
 	.changeTheme{
-		margin-left: 250px;
+		margin-left: 300px;
 	}
 }
 
