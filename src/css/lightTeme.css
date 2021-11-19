@@ -278,7 +278,7 @@ button:hover{
 	justify-content: center;
 }
 .cyber{
-	/* width: 650px; */
+	max-width: 650px;
 }
 .changeTheme{
 	margin-left: 300px;
